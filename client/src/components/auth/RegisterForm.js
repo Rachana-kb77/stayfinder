@@ -22,7 +22,7 @@ const RegisterForm = ({ onRegisterSuccess }) => {
     e.preventDefault();
     setMessage('');
     try {
-      const res = await axios.post('http://localhost:5000/auth/register', formData);
+      const res = await axios.post('https://stayfinder-backend-s4xl.onrender.com/auth/register', formData);
       localStorage.setItem('token', res.data.token); // store JWT
       onRegisterSuccess(res.data.user);
       setMessage('Registration successful 🎉');

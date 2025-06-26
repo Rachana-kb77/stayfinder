@@ -9,7 +9,7 @@ const ListingsList = () => {
   const { user } = useContext(UserContext);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/listings')
+    axios.get('https://stayfinder-backend-s4xl.onrender.com/listings')
       .then(res => {
         console.log('Fetched listings:', res.data); 
         setListings(res.data);
@@ -26,7 +26,7 @@ const ListingsList = () => {
     }
 
     try {
-      await axios.post('http://localhost:5000/bookings', {
+      await axios.post('https://stayfinder-backend-s4xl.onrender.com/bookings', {
         userId: user.id,
         listingId,
         date: new Date().toISOString().split('T')[0]  // format: YYYY-MM-DD

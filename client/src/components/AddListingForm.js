@@ -16,10 +16,11 @@ const AddListingForm = ({ onListingAdded }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/listings', formData);
+      await axios.post('https://stayfinder-backend-s4xl.onrender.com/listings', formData);
       onListingAdded(); // refresh listing list
       setFormData({ // reset form
         title: '',

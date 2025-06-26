@@ -11,7 +11,7 @@ function MyBookings() {
     const fetchBookings = async () => {
       try {
         console.log("Fetching bookings for user:", user?.id);
-        const res = await axios.get(`http://localhost:5000/bookings?userId=${user.id}`);
+        const res = await axios.get(`https://stayfinder-backend-s4xl.onrender.com/bookings?userId=${user.id}`);
         setBookings(res.data);
       } catch (err) {
         console.error('Error fetching bookings:', err);

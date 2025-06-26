@@ -13,7 +13,7 @@ function App() {
 
   const fetchListings = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/listings');
+      const res = await axios.get('https://stayfinder-backend-s4xl.onrender.com/listings');
       setListings(res.data);
     } catch (err) {
       console.error('Error fetching listings:', err);
